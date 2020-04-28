@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>  
+
+    <script>
+
+        // exercicio 1 retornar os dados do endereco
+        function Endereco (rua, numero, bairro, cidade, uf){
+            var endereco = {
+                rua: "Rua São João",
+                numero: 1234,
+                bairro: "Centro",
+                cidade: "Tatuí",
+                uf: "SP"   
+            }
+        return endereco;    
+        }
+
+        var endereco = Endereco();
+
+        console.log(
+            "O usuário mora na " + endereco.rua +
+            "No numero " + endereco.numero + 
+            " no bairro " + endereco.centro + 
+            "na cidade de " + endereco.cidade +
+            "e no estado de " + endereco.uf 
+        );
+
+        // exercicio 2
+        function Pares (x, y) {
+            for (x = 32; x <= y; x++) {
+               if(x % 2 == 0 ){
+                   console.log(x + " É um valor par");
+               }
+           }
+        }
+        Pares(32, 321);
+
+        // exercicio 3 
+        function temHabilidade(skills) {
+            var skills = [ "JavaScript",  "ReactJS", "React Native" ];
+            if(skills[0] == "JavaScript" && skills[1] == "ReactJS" && skills[2] == "React Native") {
+                return true;
+            }
+            else{
+                return false
+                }
+        }
+
+        var skills = temHabilidade(skills);
+        console.log(skills);
+
+        //exercicio 4 
+        function Experiencia(anos) {
+            var anosestudos = 3;
+            if(anosestudos <= 1 && anosestudos >= 0 ) {
+                console.log("Iniciante");
+            } 
+
+            else if ( anosestudos >= 1 && anosestudos <= 3 ) {
+                console.log("Intermediario");
+            }
+
+            else if ( anosestudos >=3 && anosestudos <=6 ) {
+                console.log("Avançado");
+            }
+            else {
+                console.log("Jadi Master");
+            }      
+
+        }
+
+        var anosestudos = anosestudos;
+        Experiencia(anosestudos);
+
+        // exercicio 5
+        function Exibir() {
+            var usuario = 
+            [
+                {
+                    nome: "Diego",
+                    habilidae:["JavaScript", "ReactJS", "React Native"]
+                },
+                {
+                    nome: "João",
+                    habilidae:["JavaScript", "HTML", "CSS"] 
+                }
+            ];
+
+            for(var valor of usuario){
+                console.log(valor.nome + " Possui as habilidades" + valor.habilidae );
+            }
+        }
+
+        var usuario = Exibir();
+        console.log(usuario);
+        
+    </script>
+    
+</body>
+</html>
